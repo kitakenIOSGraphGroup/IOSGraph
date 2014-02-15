@@ -569,7 +569,7 @@
 				INFOPLIST_FILE = "IOSGraph/IOSGraph-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/e115765/Desktop/kitaken/IOSGraph/IOSGraph/IOSGraph/iOS,
+					"$(SRCROOT)/IOSGraph/iOS",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -590,7 +590,7 @@
 				INFOPLIST_FILE = "IOSGraph/IOSGraph-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/e115765/Desktop/kitaken/IOSGraph/IOSGraph/IOSGraph/iOS,
+					"$(SRCROOT)/IOSGraph/iOS",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
