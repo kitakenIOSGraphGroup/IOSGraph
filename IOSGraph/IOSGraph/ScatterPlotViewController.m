@@ -31,8 +31,9 @@ NSString *const kData   = @"Data Source Plot";
     
     for ( NSUInteger i = 0; i < 11; i++ ) {
         NSNumber *x = [NSNumber numberWithDouble:i];
-        NSNumber *y = [NSNumber numberWithDouble:(int)(rand() / (double)RAND_MAX * 10)]; // 1〜10の値のランダム値(int)
+        NSNumber *y = [NSNumber numberWithDouble:(double)arc4random() / 0x100000000 * 10]; // 1〜10の値のランダム値(int)
         [self.scatterPlotData addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:x, @"x", y, @"y", nil]];
+
     }
     
     // ホスティングビューを生成
@@ -70,13 +71,13 @@ NSString *const kData   = @"Data Source Plot";
     
     // テキストスタイル
     CPTMutableTextStyle *textStyle = [CPTTextStyle textStyle];
-    textStyle.color                = [CPTColor colorWithComponentRed:0.447f green:0.443f blue:0.443f alpha:1.0f];
+    textStyle.color                = [CPTColor colorWithComponentRed:0.447f green:0 blue:0 alpha:1.0f];
     textStyle.fontSize             = 13.0f;
     textStyle.textAlignment        = CPTTextAlignmentCenter;
     
     // ラインスタイル
     CPTMutableLineStyle *lineStyle = [CPTMutableLineStyle lineStyle];
-    lineStyle.lineColor            = [CPTColor colorWithComponentRed:0.788f green:0.792f blue:0.792f alpha:1.0f];
+    lineStyle.lineColor            = [CPTColor colorWithComponentRed:0 green:0 blue:0.792f alpha:1.0f];
     lineStyle.lineWidth            = 2.0f;
     
     // X軸のメモリ・ラベルなどの設定
@@ -87,13 +88,13 @@ NSString *const kData   = @"Data Source Plot";
     x.minorTickLineStyle          = lineStyle;      // X軸の小さいメモリにラインスタイルを適用
     x.majorIntervalLength         = CPTDecimalFromString(@"2"); // X軸ラベルの表示間隔
     x.orthogonalCoordinateDecimal = CPTDecimalFromString(@"0"); // X軸のY位置
-    x.title                       = @"X軸";
-    x.titleTextStyle = textStyle;
+    x.title                       = @"X軸でーす〜";
+    x.titleTextStyle              = textStyle;
     x.titleLocation               = CPTDecimalFromFloat(5.0f);
     x.titleOffset                 = 36.0f;
     //    x.minorTickLength = 5.0f;                   // X軸のメモリの長さ ラベルを設定しているため無効ぽい
     //    x.majorTickLength = 9.0f;                   // X軸のメモリの長さ ラベルを設定しているため無効ぽい
-    x.labelTextStyle = textStyle;
+    x.labelTextStyle              = textStyle;
     
     // Y軸のメモリ・ラベルなどの設定
     CPTXYAxis *y = axisSet.yAxis;
@@ -121,7 +122,7 @@ NSString *const kData   = @"Data Source Plot";
     // 折れ線グラフのスタイルを設定
     CPTMutableLineStyle *graphlineStyle = [scatterPlot.dataLineStyle mutableCopy];
     graphlineStyle.lineWidth = 3;                    // 太さ
-    graphlineStyle.lineColor = [CPTColor colorWithComponentRed:0.573f green:0.82f blue:0.831f alpha:0.50f];// 色
+    graphlineStyle.lineColor = [CPTColor colorWithComponentRed:0 green:0.82f blue:0 alpha:1];// 色
     scatterPlot.dataLineStyle = graphlineStyle;
     
     // グラフに折れ線グラフを追加
