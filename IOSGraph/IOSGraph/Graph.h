@@ -1,7 +1,7 @@
 #import "CPTGraph.h"
 #import "CorePlot-CocoaTouch.h"
 
-@interface LineGraph : CPTGraph
+@interface Graph : CPTGraph
 
 -(void)framePad:(float)left right:(float)right top:(float)top bottom:(float)bottom;
 -(void)plotSpace:(CGPoint)startPoint width:(int)width height:(int)height;

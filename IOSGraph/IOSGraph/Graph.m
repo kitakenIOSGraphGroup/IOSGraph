@@ -1,6 +1,6 @@
-#import "LineGraph.h"
+#import "Graph.h"
 
-@implementation LineGraph
+@implementation Graph
 
 -(void)borderStyle:(CPTLineStyle *)lineStyle cornerRadius:(float)cornerRadius masksToBorder:(BOOL)mask {
     self.plotAreaFrame.borderLineStyle = lineStyle;
