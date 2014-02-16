@@ -25,6 +25,7 @@
 		7700D16318AF4CA00017003A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7700D16218AF4CA00017003A /* QuartzCore.framework */; };
 		7700D1B718AF4E610017003A /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7700D1B618AF4E610017003A /* libCorePlot-CocoaTouch.a */; };
 		7700D1BE18B076360017003A /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700D1BD18B076360017003A /* Graph.m */; };
+		7700D1C118B0B1160017003A /* LineScatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700D1C018B0B1160017003A /* LineScatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,8 @@
 		7700D1B618AF4E610017003A /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		7700D1BC18B076360017003A /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		7700D1BD18B076360017003A /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		7700D1BF18B0B1160017003A /* LineScatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineScatter.h; sourceTree = "<group>"; };
+		7700D1C018B0B1160017003A /* LineScatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineScatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 				7700D10E18AF49700017003A /* ScatterPlotViewController.m */,
 				7700D1BC18B076360017003A /* Graph.h */,
 				7700D1BD18B076360017003A /* Graph.m */,
+				7700D1BF18B0B1160017003A /* LineScatter.h */,
+				7700D1C018B0B1160017003A /* LineScatter.m */,
 				7700D0ED18AF1DB60017003A /* ViewController.h */,
 				7700D0EE18AF1DB60017003A /* ViewController.m */,
 				7700D0F018AF1DB60017003A /* Images.xcassets */,
@@ -441,6 +446,7 @@
 			files = (
 				7700D1BE18B076360017003A /* Graph.m in Sources */,
 				7700D0EF18AF1DB60017003A /* ViewController.m in Sources */,
+				7700D1C118B0B1160017003A /* LineScatter.m in Sources */,
 				7700D0E918AF1DB60017003A /* AppDelegate.m in Sources */,
 				7700D10F18AF49700017003A /* ScatterPlotViewController.m in Sources */,
 				7700D0E518AF1DB60017003A /* main.m in Sources */,
