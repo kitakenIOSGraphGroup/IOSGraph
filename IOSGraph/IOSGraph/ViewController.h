@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CorePlot-CocoaTouch.h"
+#import "LineScatter.h"
+#import "Graph.h"
 @interface ViewController : UIViewController
-
+@property (nonatomic, strong) Graph *graph;
+@property (nonatomic, strong) LineScatter *scatter;
+@property (nonatomic, strong) NSMutableArray *graphData;
 @end

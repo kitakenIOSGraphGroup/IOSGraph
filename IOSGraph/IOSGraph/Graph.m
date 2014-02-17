@@ -1,13 +1,6 @@
 #import "Graph.h"
 
 @implementation Graph
--(id)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    return self;
-}
 
 -(void)borderStyle:(CPTLineStyle *)lineStyle cornerRadius:(float)radius masksToBorder:(BOOL)mask {
     self.plotAreaFrame.borderLineStyle = lineStyle;

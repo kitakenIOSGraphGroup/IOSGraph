@@ -45,28 +45,26 @@
     NSString *identifier = (NSString *)plot.identifier;
     
     if (![identifier isEqualToString:self.graphIdentify]) {
-        [self field:fieldEnum index:index number:num];
         return num;
     }
-    
+    num = [self field:fieldEnum index:index];
     return num;
 }
 
--(void)field:(NSInteger)fieldEnum index:(NSInteger)index number:(NSNumber *)number {
+-(NSNumber *)field:(NSInteger)fieldEnum index:(NSInteger)index {
     if (fieldEnum == CPTScatterPlotFieldX) {
-        [self fieldX:(NSInteger)fieldEnum index:(NSInteger)index number:(NSNumber *)number];
-        return;
+       return [self fieldX:(NSInteger)fieldEnum index:(NSInteger)index];
     }
-    [self fieldY:(NSInteger)fieldEnum index:(NSInteger)index number:(NSNumber *)number ];
+    return [self fieldY:(NSInteger)fieldEnum index:(NSInteger)index];
 }
 
--(void)fieldX:(NSInteger)fieldEnum index:(NSInteger)index number:(NSNumber *)number {
+-(NSNumber *)fieldX:(NSInteger)fieldEnum index:(NSInteger)index{
     float result = self.sampleRate * (float)index;
-    number       = [NSNumber numberWithFloat:result];
+    return [NSNumber numberWithFloat:result];
 }
 
--(void)fieldY:(NSInteger)fieldEnum index:(NSInteger)index number:(NSNumber *)number {
-    number = (NSNumber *)[self.data objectAtIndex:index];
+-(NSNumber *)fieldY:(NSInteger)fieldEnum index:(NSInteger)index{
+    return (NSNumber *)[self.data objectAtIndex:index];
 }
 
 @end
