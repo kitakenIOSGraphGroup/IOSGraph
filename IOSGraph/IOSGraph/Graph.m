@@ -1,10 +1,17 @@
 #import "Graph.h"
 
 @implementation Graph
+-(id)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    return self;
+}
 
--(void)borderStyle:(CPTLineStyle *)lineStyle cornerRadius:(float)cornerRadius masksToBorder:(BOOL)mask {
+-(void)borderStyle:(CPTLineStyle *)lineStyle cornerRadius:(float)radius masksToBorder:(BOOL)mask {
     self.plotAreaFrame.borderLineStyle = lineStyle;
-    self.plotAreaFrame.cornerRadius    = cornerRadius;
+    self.plotAreaFrame.cornerRadius    = radius;
     self.plotAreaFrame.masksToBorder   = mask;
 }
 
@@ -31,30 +38,24 @@
 
 -(void)coordinateStyle:(CPTMutableLineStyle *)axisLine majorLine:(CPTMutableLineStyle *)majorLine minorLine:(CPTMutableLineStyle *)minorLine {
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.axisSet;
-    CPTXYAxis *x          = axisSet.xAxis;
-    x.axisLineStyle       = axisLine;
-    x.majorTickLineStyle  = majorLine;
-    x.minorTickLineStyle  = minorLine;
-    
-    CPTXYAxis *y         = axisSet.yAxis;
-    y.axisLineStyle      = axisLine;
-    y.majorTickLineStyle = majorLine;
-    y.minorTickLineStyle = minorLine;
+    axisSet.xAxis.axisLineStyle       = axisLine;
+    axisSet.xAxis.majorTickLineStyle  = majorLine;
+    axisSet.xAxis.minorTickLineStyle  = minorLine;
+    axisSet.yAxis.axisLineStyle      = axisLine;
+    axisSet.yAxis.majorTickLineStyle = majorLine;
+    axisSet.yAxis.minorTickLineStyle = minorLine;
 }
 
 -(void)coordinateTitle:(NSString *)titleX titleY:(NSString *)titleY tittlePosition:(CGPoint)possition textStly:(CPTMutableTextStyle *)textStyle {
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.axisSet;
-    CPTXYAxis *x          = axisSet.xAxis;
-    x.title               = titleX;
-    x.titleTextStyle      = textStyle;
-    x.titleLocation       = CPTDecimalFromFloat(possition.x);
-    x.titleOffset         = textStyle.fontSize;
-    
-    CPTXYAxis *y     = axisSet.yAxis;
-    y.title          = titleY;
-    y.titleTextStyle = textStyle;
-    y.titleLocation  = CPTDecimalFromFloat(possition.y);
-    y.titleOffset    = textStyle.fontSize;
+    axisSet.xAxis.title          = titleX;
+    axisSet.xAxis.titleTextStyle = textStyle;
+    axisSet.xAxis.titleLocation  = CPTDecimalFromFloat(possition.x);
+    axisSet.xAxis.titleOffset    = textStyle.fontSize;
+    axisSet.yAxis.title          = titleY;
+    axisSet.yAxis.titleTextStyle = textStyle;
+    axisSet.yAxis.titleLocation  = CPTDecimalFromFloat(possition.y);
+    axisSet.yAxis.titleOffset    = textStyle.fontSize;
 }
 
 -(void)coordinateText:(CPTMutableTextStyle *)textStyle {
@@ -63,7 +64,7 @@
     axisSet.yAxis.labelTextStyle = textStyle;
 }
 
--(void)coordinateInterval:(float)xWidth yWidth:(float)yWidth coordinateCrossPosition:(CGPoint)position {
+-(void)coordinateInterval:(float)xWidth yWidth:(float)yWidth crossPosition:(CGPoint)position {
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.axisSet;
     axisSet.xAxis.majorIntervalLength = CPTDecimalFromFloat(xWidth);
     axisSet.yAxis.majorIntervalLength = CPTDecimalFromFloat(yWidth);
@@ -76,5 +77,4 @@
     axisSet.xAxis.majorGridLineStyle = gridX;
     axisSet.yAxis.majorGridLineStyle = gridY;
 }
-
 @end

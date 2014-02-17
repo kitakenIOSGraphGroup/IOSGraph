@@ -45,6 +45,7 @@
     NSString *identifier = (NSString *)plot.identifier;
     
     if (![identifier isEqualToString:self.graphIdentify]) {
+        [self field:fieldEnum index:index number:num];
         return num;
     }
     
