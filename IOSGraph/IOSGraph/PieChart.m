@@ -27,8 +27,8 @@
 
 -(CPTLayer *)dataLabelForPlot:(CPTPlot *)plot recordIndex:(NSUInteger)index {
     NSNumber    *data = [self.dataList objectAtIndex:index];
-    NSString *message = [self.dataList objectAtIndex:index];
-    NSString *details = [NSString stringWithFormat:@"\n%f",[data floatValue]];
+    NSString *message = [self.dataName objectAtIndex:index];
+    NSString *details = [NSString stringWithFormat:@"\n%.2f",[data floatValue]];
     message           = [message stringByAppendingString:details];
 
     CPTTextLayer *label = [[CPTTextLayer alloc] initWithText:message];
@@ -67,4 +67,7 @@
     [self.dataList replaceObjectAtIndex:index withObject:number];
 }
 
+-(void)addNames:(NSMutableArray *)name {
+    [self.dataName addObjectsFromArray:name];
+}
 @end
