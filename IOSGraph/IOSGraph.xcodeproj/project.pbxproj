@@ -26,6 +26,7 @@
 		7700D1B718AF4E610017003A /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7700D1B618AF4E610017003A /* libCorePlot-CocoaTouch.a */; };
 		7700D1BE18B076360017003A /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700D1BD18B076360017003A /* Graph.m */; };
 		7700D1C118B0B1160017003A /* LineScatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700D1C018B0B1160017003A /* LineScatter.m */; };
+		77DE32EA18C43444002D07B7 /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DE32E918C43444002D07B7 /* PieChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		7700D1BD18B076360017003A /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
 		7700D1BF18B0B1160017003A /* LineScatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineScatter.h; sourceTree = "<group>"; };
 		7700D1C018B0B1160017003A /* LineScatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineScatter.m; sourceTree = "<group>"; };
+		77DE32E818C43444002D07B7 /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		77DE32E918C43444002D07B7 /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				7700D1BD18B076360017003A /* Graph.m */,
 				7700D1BF18B0B1160017003A /* LineScatter.h */,
 				7700D1C018B0B1160017003A /* LineScatter.m */,
+				77DE32E818C43444002D07B7 /* PieChart.h */,
+				77DE32E918C43444002D07B7 /* PieChart.m */,
 				7700D0ED18AF1DB60017003A /* ViewController.h */,
 				7700D0EE18AF1DB60017003A /* ViewController.m */,
 				7700D0F018AF1DB60017003A /* Images.xcassets */,
@@ -447,6 +452,7 @@
 				7700D1BE18B076360017003A /* Graph.m in Sources */,
 				7700D0EF18AF1DB60017003A /* ViewController.m in Sources */,
 				7700D1C118B0B1160017003A /* LineScatter.m in Sources */,
+				77DE32EA18C43444002D07B7 /* PieChart.m in Sources */,
 				7700D0E918AF1DB60017003A /* AppDelegate.m in Sources */,
 				7700D10F18AF49700017003A /* ScatterPlotViewController.m in Sources */,
 				7700D0E518AF1DB60017003A /* main.m in Sources */,
